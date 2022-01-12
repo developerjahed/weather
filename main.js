@@ -19,4 +19,7 @@ const displayTemp=temp=>{
     setInnerText('city', temp.name)
     setInnerText('temp', temp.main.temp)
     console.log(temp);
+    const weatherData=temp.weather[0];
+    console.log(weatherData);
+    setInnerText('cond', weatherData.main)
 }
