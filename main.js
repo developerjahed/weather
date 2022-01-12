@@ -13,7 +13,6 @@ const searchTemperature=()=>{
 
 const setInnerText=(id, text)=>{
    document.getElementById(id).innerText=text;
-   document.getElementById(id).innerText=text;
 }
 const displayTemp=temp=>{
     setInnerText('city', temp.name)
@@ -21,5 +20,6 @@ const displayTemp=temp=>{
     console.log(temp);
     const weatherData=temp.weather[0];
     console.log(weatherData);
-    setInnerText('cond', weatherData.main)
+    setInnerText('cond', weatherData.main);
+    document.getElementById('img').src=`https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`
 }
